@@ -34,10 +34,10 @@ async function calculateAgeDistribution() {
 })
 
   for (const ageGroup in ageDistribution) {
-    ageDistribution[ageGroup] = ((ageDistribution[ageGroup] / total) * 100).toFixed(2);
+    ageDistribution[ageGroup] = ((ageDistribution[ageGroup] / total) * 100).toFixed(2) + ' %';
   }
 
-  console.log("Age-Group % Distribution", ageDistribution);
+  console.log("Age-Group :- % Distribution", ageDistribution);
   return ageDistribution;
 }
 

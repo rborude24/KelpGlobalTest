@@ -21,10 +21,10 @@ describe('calculateAgeDistribution', () => {
     const result = await calculateAgeDistribution();
 
     expect(result).toEqual({
-      '< 20': '20.00',
-      '20 to 40': '40.00',
-      '40 to 60': '30.00',
-      '> 60': '10.00',
+      '< 20': '20.00 %',
+      '20 to 40': '40.00 %',
+      '40 to 60': '30.00 %',
+      '> 60': '10.00 %',
     });
   });
 

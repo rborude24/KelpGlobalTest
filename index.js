@@ -13,11 +13,7 @@ app.use(bodyParser.json());
 app.post("/process-csv", async (req, res) => {
   try {
     const result = await csvProcessorService();
-    if (!result.success) {
-      res.status(500).json(result);
-    } else {
       res.status(200).json({ message: "Data processed successfully", result });
-    }
   } catch (error) {
     console.error("Error processing data:", error);
     res.status(500).json({ error: "Internal server error" });
