@@ -27,7 +27,6 @@ const createTableQuery = `
 async function insertDataIntoUsersTable(jsonData) {
   try {
     // Create the table if it doesn't exist
-    console.log(createTableQuery);
     await pool.query(createTableQuery);
 
     // Prepare the data for bulk insert
@@ -40,9 +39,8 @@ async function insertDataIntoUsersTable(jsonData) {
     );
 
     // Execute the query
-    console.log(insertQuery);
     const result = await pool.query(insertQuery);
-    console.log("Data inserted successfully!", result);
+    console.log("Data inserted successfully!");
 
     return {
       success: true,
@@ -63,7 +61,7 @@ async function getDataFromDB(query) {
   try {
     // execute query
     var res = await pool.query(query);
-    console.log("Data got successfully!", res);
+    console.log("Data got successfully!");
     return {
       success: true,
       data: res?.rows,
